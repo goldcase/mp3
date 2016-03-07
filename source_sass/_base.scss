@@ -1,1 +1,18 @@
 // Add any custom Sass & CSS here
+.movie-poster {
+	height: 100px;
+	width: auto;
+	float: left;
+	padding: 10px;
+}
+
+.awards {
+	font-style: italic;
+}
+
+ul.list {
+	li {
+		height: 150px;
+		width: 100%
+	}
+}

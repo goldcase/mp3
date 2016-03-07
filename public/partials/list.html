@@ -1,0 +1,10 @@
+<ul class="list">
+	<li ng-repeat="movie in movies">
+	<a href="details/{{movie.rank}}">
+		<img ng-src="./data/images/{{movie.imdbID}}.jpg" alt="movie poster image" class="movie-poster">
+		<h3 ng-bind="movie.title"></h3>
+		<p ng-bind="movie.plot"></p>
+		<p>Awards: <span class="awards" ng-bind="movie.awards"></span></p>
+	</a>
+	</li>
+</ul>
