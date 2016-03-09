@@ -2,7 +2,7 @@
 app.controller("DataController", ["$scope", "$http", function($scope, $http) {
 	$http({
 		method: "GET",
-		url: "../data/imdb250.json"
+		url: "./data/imdb250.json"
 	}).success(function(data, status, headers, config) {
 		$scope.movies = data;
 	}).error(function(data, status, headers, config) {
