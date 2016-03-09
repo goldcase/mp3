@@ -19,10 +19,20 @@
 </head>
 
 <body ng-app="mp3" ng-controller="DataController">
-    <a href="gallery" class="button">Gallery</a>
-    
-    <div ng-view>
+    <div class="container">
+
+        <div class="horizontal-align">
+            <div class="common-items">
+                Search: <input ng-model="searchText">
+
+                <a href="gallery" class="button">Gallery</a>
+                <a href="list" class="button">List</a>
+
+            </div>
+        </div>
         
+        <div ng-view>
+        </div>
     </div>
 
     <!-- Scripts -->

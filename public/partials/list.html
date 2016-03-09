@@ -1,10 +1,17 @@
+Sort by:
+<a href="#" class="button" ng-click="order('title')">Title</a>
+<a href="#" class="button" ng-click="order('rank')">Rank</a>
+Ascending: <input type="radio" name="select-reverse" ng-click="is_ascending(1)">
+Descending: <input type="radio" name="select-reverse" ng-click="is_ascending(0)">
+
 <ul class="list">
-	<li ng-repeat="movie in movies">
+	<li ng-repeat="movie in movies | filter:searchText | orderBy:predicate:reverse">
 	<a href="details/{{movie.rank}}">
 		<img ng-src="./data/images/{{movie.imdbID}}.jpg" alt="movie poster image" class="movie-poster">
 		<h3 ng-bind="movie.title"></h3>
 		<p ng-bind="movie.plot"></p>
 		<p>Awards: <span class="awards" ng-bind="movie.awards"></span></p>
+		<p>Rank: <span class="rank" ng-bind="movie.rank"></span></p>
 	</a>
 	</li>
 </ul>

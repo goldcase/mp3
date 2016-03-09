@@ -10,12 +10,13 @@ app.config(function ($routeProvider, $locationProvider) {
 			templateUrl: "partials/details.html",
 			controller: "DetailController"
 		})
-		.when("/shit", {
-			templateUrl: "paritals/details.html",
-			controller: "ListController"
+		.when("/gallery", {
+			templateUrl: "partials/gallery.html",
+			controller: "GalleryController"
 		})
 		.otherwise({
 			redirectTo: "/"
 		});
+
 	$locationProvider.html5Mode(true);
 });
