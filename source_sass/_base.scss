@@ -1,10 +1,27 @@
 .container {
 	@include full-screen();
 	@include horizontal-align();
-	max-width: 1280px;
+	max-width: 1024px;
+	position: absolute;
 }
+
+.center {
+	text-align: center;
+}
+
+.full-width {
+	width: 100%;
+}
+
 .movie-poster {
 	height: 100px;
+	width: auto;
+	float: left;
+	padding: 10px;
+}
+
+.detail-movie-poster {
+	height: 300px;
 	width: auto;
 	float: left;
 	padding: 10px;
@@ -16,8 +33,9 @@
 
 ul.list {
 	li {
-		height: 150px;
-		width: 100%
+		width: 100%;
+		padding: 20px;
+		background: $light-blue-gray;
 	}
 }
 

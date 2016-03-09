@@ -1,9 +1,11 @@
 <a class="button prev" ng-href="details/{{movie.rank == 1 ? 250 : movie.rank - 1}}">Previous</a>
 <a class="button next" ng-href="details/{{movie.rank == 250 ? 1 : movie.rank + 1}}">Next</a>
-
+<br>
+<br>
+<br>
 <div class="horizontal-align">
 	<div class="movie-tile">
-		<img ng-src="./data/images/{{movie.imdbID}}.jpg" alt="movie poster" class="movie-poster">
+		<img ng-src="./data/images/{{movie.imdbID}}.jpg" alt="movie poster" class="detail-movie-poster">
 		<h2 class="title" ng-bind="movie.title"></h2>
 		<p class="rank">Rank: <span ng-bind="movie.rank"></span></p>
 		<p class="director">Directed by <span ng-bind="movie.director"></span> in <span ng-bind="movie.released"></span></p>
