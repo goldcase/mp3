@@ -33,9 +33,14 @@ app.controller("ListController", ["$scope", function($scope) {
 app.controller("DetailController", ["$scope", "$routeParams", function($scope, $routeParams) {
 	$scope.movie_id = $routeParams.movie_rank - 1;
 	$scope.movie = $scope.movies[$scope.movie_id];
+
 }]);
 
-app.controller("GalleryController", ["$scope", function(){
-	
-	
+app.controller("GalleryController", ["$scope", function($scope){
+	$scope.genreType = "";
+
+	$scope.select_genre = function(order_str) {
+		console.log(order_str);
+		$scope.genreType = order_str;
+	};
 }]);

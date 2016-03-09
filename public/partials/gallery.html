@@ -1,7 +1,59 @@
-<div class="row">
-	<div class="small-6 medium-3 large-2 poster-tile" ng-repeat="movie in movies">
+<div class="row horizontal-align center genre-select">
+	<a href="#" class="button" ng-click="select_genre('')">
+		All	
+	</a>
+
+	<a href="#" class="button" ng-click="select_genre('Action')">
+		Action
+	</a>
+
+	<a href="#" class="button" ng-click="select_genre('Adventure')">
+		Adventure
+	</a>
+
+	<a href="#" class="button" ng-click="select_genre('Crime')">
+		Crime	
+	</a>
+
+	<a href="#" class="button" ng-click="select_genre('Comedy')">
+		Comedy
+	</a>
+
+	<a href="#" class="button" ng-click="select_genre('Drama')">
+		Drama
+	</a>
+
+	<a href="#" class="button" ng-click="select_genre('Musical')">
+		Musical
+	</a>
+
+	<a href="#" class="button" ng-click="select_genre('Romance')">
+		Romance
+	</a>
+
+	<a href="#" class="button" ng-click="select_genre('Sci-Fi')">
+		Sci-Fi
+	</a>
+
+	<a href="#" class="button" ng-click="select_genre('Thriller')">
+		Thriller
+	</a>
+
+	<a href="#" class="button" ng-click="select_genre('Western')">
+		Western
+	</a>
+
+</div>
+
+<div class="row poster-container">
+	<div class="small-6 medium-3 large-2 poster-tile" ng-repeat="movie in movies | filter:genreType">
 	<a ng-href="details/{{movie.rank}}">
 		<img ng-src="./data/images/{{movie.imdbID}}.jpg" class="poster" alt="poster">
+		<ul class="no-show">
+			<li ng-repeat="gen in movie.genre">
+				{{gen}}
+			</li>
+		</ul>
 	</a>
 	</div>
 </div>
