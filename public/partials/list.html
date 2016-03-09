@@ -13,7 +13,7 @@
 
 <ul class="list row">
 	<li ng-repeat="movie in movies | filter:searchText | orderBy:predicate:reverse" class="columns small-12">
-	<a href="details/{{movie.rank}}">
+	<a ng-href="#/details/{{movie.rank}}">
 		<img ng-src="./data/images/{{movie.imdbID}}.jpg" alt="movie poster image" class="movie-poster">
 		<h3 ng-bind="movie.title"></h3>
 		<p ng-bind="movie.plot"></p>
