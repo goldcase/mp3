@@ -45,8 +45,8 @@
 
 </div>
 
-<div class="row poster-container">
-	<div class="small-6 medium-3 large-2 poster-tile" ng-repeat="movie in movies | filter:genreType">
+<div class="row poster-container center horizontal-align">
+	<div class="columns center small-6 medium-3 large-2 poster-tile" ng-repeat="movie in movies | filter:genreType">
 	<a ng-href="details/{{movie.rank}}">
 		<img ng-src="./data/images/{{movie.imdbID}}.jpg" class="poster" alt="poster">
 		<ul class="no-show">

@@ -57,10 +57,13 @@ ul.list {
 	height: 300px;
 	width: auto;
 	float: left;
+	// padding: 5px;
 
 	a {
 		img {
-			height: 300px;
+			@include vertical-align;
+
+			height: 280px;
 			width: auto;
 		}
 
